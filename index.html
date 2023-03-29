@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculador de edad y signo zodiacal</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <h1>Calculadora de Edad y Signo Zodiacal</h1>
+    <div class="form">
+        <form action="" class="formu">
+            <div class="inputs">
+                <label>Ingrese su nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="inputs">
+                <label>Fecha de Nacimiento:</label>
+                <input type="date" id="fecha" required>
+            </div>
+            <div class="inputs">
+                <label id="res"></label>
+            </div>
+            <div class="boton">
+                <button type="submit">Calcular</button>
+            </div>
+
+        </form>
+
+
+
+    </div>
+    <div class="contenedor_resp">
+        <span class="clos_resp">x</span>
+        <div class="cont_res" id="cont_res">
+            <p id="saludo"></p>
+            <p>Tienes <span id="edad"></span> años, <span id="meses"></span> meses </p>
+            <p>Desde tu Nacimiento a la fecha de hoy haz vivido en este mundo <span id="dias"></span> días.</p>
+            <p>Tu signo zodiacal es <span id="signo"></span>.</p>
+            <p id="fechaCompleta"></p>
+          </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
