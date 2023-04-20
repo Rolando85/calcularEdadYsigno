@@ -1,8 +1,9 @@
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
 }
 h1{
     width: 100%;
@@ -12,11 +13,21 @@ h1{
 .form{
     /* border: solid black 1px; */
     width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.form p{
+    text-align: center;
+}
+
 .formu{
     width: 80%;
     background-color: rgb(240, 240, 240);
-    margin: 10px auto;
+    margin: 40px auto;
     padding-top: 20px;
     border-radius: 10px;
     box-shadow: 2px 3px 10px 1px black;
@@ -40,6 +51,12 @@ h1{
 }
 .cont_res{
     font-size: 22px;
+    /* border: solid black 1px; */
+    padding: 50px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background: white;
+    box-shadow: 1px 1px 8px 1px black;
 }
 .cont_res span{
     font-weight: bold;
@@ -56,7 +73,7 @@ h1{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;

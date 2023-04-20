@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculador de edad y signo zodiacal</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css?v=1">
 
 </head>
 <body>
-    <h1>Calculadora de Edad y Signo Zodiacal</h1>
     <div class="form">
+    <h1>Calculadora de Edad y Signo Zodiacal</h1>
+<p>Quieres saber la edad exacta de una persona segun su fecha de Nacimiento sin tener que estar haciendo calculos y quebrandote la cabeza?</p>
+<p>Ingrese los datos en el formulario y obtendras el resultado al instante.</p>
         <form action="" class="formu">
             <div class="inputs">
                 <label>Ingrese su nombre:</label>
@@ -29,16 +33,13 @@
             </div>
 
         </form>
-
-
-
     </div>
     <div class="contenedor_resp">
         <span class="clos_resp">x</span>
         <div class="cont_res" id="cont_res">
             <p id="saludo"></p>
-            <p>Tienes <span id="edad"></span> años, <span id="meses"></span> meses </p>
-            <p>Desde tu Nacimiento a la fecha de hoy haz vivido en este mundo <span id="dias"></span> días.</p>
+            <p>Tienes <span id="edad"></span> años y <span id="meses"></span> meses. </p>
+            <p><span id="dias"></span> días en total.</p>
             <p>Tu signo zodiacal es <span id="signo"></span>.</p>
             <p id="fechaCompleta"></p>
           </div>

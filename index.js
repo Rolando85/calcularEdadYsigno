@@ -28,11 +28,15 @@ function calcular() {
     }else{
         ver_resp()
         document.getElementById("res").innerHTML ='';
-        document.getElementById("saludo").innerHTML =`Hola <strong>${nombre}</strong> segun tu fecha de Nacimiento proporcionada:`;
+        document.getElementById("saludo").innerHTML =`Hola <strong>${nombre}</strong> segun tu fecha de Nacimiento:`;
         document.getElementById("edad").innerHTML = edadAnios;
         document.getElementById("meses").innerHTML = edadMeses;
         document.getElementById("dias").innerHTML = edadDias;
         document.getElementById("signo").innerHTML = signo;
+
+    //     var mesesCompletos = Math.floor(edadDias / 30);
+    //    document.getElementById("meses").innerHTML = mesesCompletos;
+
     
         var fechaCompleta =` <strong> ${diaSemana}</strong>  <strong>${fechaNacimiento.getDate()}</strong> de <strong>${mes}</strong> de <strong>${anio}</strong>`;
     document.getElementById("fechaCompleta").innerHTML = "Naciste el " + fechaCompleta;
@@ -43,6 +47,51 @@ function calcular() {
 
 
 }
+
+// function calcular() {
+//   var fechaNacimiento = new Date(document.getElementById("fecha").value);
+//   var nombre = document.getElementById("nombre").value;
+//   fechaNacimiento.setDate(fechaNacimiento.getDate() + 1); // agregamos un día a la fecha de nacimiento
+//   var hoy = new Date();
+//   var edadAnios = hoy.getFullYear() - fechaNacimiento.getFullYear();
+//   var cumple = new Date(hoy.getFullYear(), fechaNacimiento.getMonth(), fechaNacimiento.getDate());
+//   if (hoy < cumple) {
+//     cumple.setFullYear(cumple.getFullYear() - 1);
+//   }
+//   var edadMeses = (hoy.getMonth() - cumple.getMonth()) + 12 * (hoy.getFullYear() - cumple.getFullYear());
+//   var edadDias = Math.floor((hoy.getTime() - fechaNacimiento.getTime()) / (1000 * 3600 * 24));
+//   edadDias = edadDias.toLocaleString('en-US')
+//   var signo = obtenerSigno(fechaNacimiento.getMonth() + 1, fechaNacimiento.getDate());
+//   var diaSemana = obtenerDiaSemana(fechaNacimiento.getDay());
+//   var mes = obtenerMes(fechaNacimiento.getMonth());
+
+//   var anio = fechaNacimiento.getFullYear();
+//   if (fechaNacimiento > hoy) {
+//     document.getElementById("res").innerHTML = 'La fecha de nacimiento no puede ser posterior a la fecha actual';
+//   } else {
+//     ver_resp()
+//     document.getElementById("res").innerHTML = '';
+//     document.getElementById("saludo").innerHTML = `Hola <strong>${nombre}</strong> segun tu fecha de Nacimiento:`;
+//     document.getElementById("edad").innerHTML = edadAnios;
+//     if (edadMeses == 0) {
+//       document.getElementById("meses").innerHTML = edadDias;
+//     } else {
+//       document.getElementById("meses").innerHTML = edadMeses;
+//     }
+//     document.getElementById("dias").innerHTML = edadDias;
+//     document.getElementById("signo").innerHTML = signo;
+
+//     var fechaCompleta = ` <strong> ${diaSemana}</strong>  <strong>${fechaNacimiento.getDate()}</strong> de <strong>${mes}</strong> de <strong>${anio}</strong>`;
+//     document.getElementById("fechaCompleta").innerHTML = "Naciste el " + fechaCompleta;
+
+//     document.querySelector('.formu').reset();
+//   }
+// }
+
+  
+  
+
+
 
   function obtenerSigno(mes, dia) {
     // Este código es sólo un ejemplo y puede ser reemplazado por un algoritmo real para obtener el signo zodiacal.
